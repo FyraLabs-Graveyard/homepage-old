@@ -151,7 +151,6 @@ const Home = () => {
       <Head>
         <title>FyraLabs</title>
         <meta property="og:title" content="FyraLabs" />
-        <meta property="og:site_name" content="FyraLabs Homepage" />
         <meta property="og:url" content="https://fyralabs.com" />
         <meta
           property="og:description"
