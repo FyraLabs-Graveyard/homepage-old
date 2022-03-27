@@ -1,3 +1,4 @@
+import "../styles/index.scss";
 import { AppProps } from "next/app";
 import { createTheme, NextUIProvider } from "@nextui-org/react";
 
