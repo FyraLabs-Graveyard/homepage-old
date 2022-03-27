@@ -1,7 +1,7 @@
 import { Button, Card, Container, Row, Text } from "@nextui-org/react";
 import styles from "../styles/index.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faL } from "@fortawesome/free-solid-svg-icons";
 import {
   faDiscord,
   faGithub,
@@ -170,15 +170,15 @@ const Home = () => {
           m: 0,
           gap: "50px",
           alignItems: "center",
-          overflow: "auto",
           justifyContent: "space-between",
         }}
         display="flex"
         direction="column"
-        gap={0}
-        fluid
-        className={styles.bg}
         wrap="nowrap"
+        gap={0}
+        className={styles.bg}
+        fluid
+        responsive={false}
       >
         <Container
           gap={0}
