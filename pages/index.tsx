@@ -1,7 +1,7 @@
 import { Button, Card, Container, Row, Text } from "@nextui-org/react";
 import styles from "../styles/index.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faL } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faDiscord,
   faGithub,
@@ -12,7 +12,12 @@ import { Col } from "@nextui-org/react";
 import Head from "next/head";
 
 export const TauCard = () => (
-  <Card cover css={{ w: "300px", height: "290px" }}>
+  <Card
+    cover
+    css={{ w: "300px", height: "290px" }}
+    // TODO: NextUI sets this as section, which is an abstract aria role, and not valid. File an issue?
+    role="figure"
+  >
     <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
       <Col>
         <Text size={12} weight="bold" transform="uppercase" color="#ffffffAA">
@@ -67,7 +72,7 @@ export const TauCard = () => (
                   weight="bold"
                   transform="uppercase"
                 >
-                  Learn More
+                  Get Tau
                 </Text>
               </Button>
             </a>
@@ -79,7 +84,12 @@ export const TauCard = () => (
 );
 
 export const PhotonCard = () => (
-  <Card cover css={{ w: "300px", height: "290px" }}>
+  <Card
+    cover
+    css={{ w: "300px", height: "290px" }}
+    // TODO: NextUI sets this as section, which is an abstract aria role, and not valid. File an issue?
+    role="figure"
+  >
     <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
       <Col>
         <Text size={12} weight="bold" transform="uppercase" color="#ffffffAA">
@@ -245,26 +255,54 @@ const Home = () => {
           display="flex"
           direction="row"
         >
-          <a href="mailto:contact@fyralabs.com">
-            <Button color="primary" auto ghost>
-              <FontAwesomeIcon icon={faEnvelope} />
-            </Button>
-          </a>
-          <a href="https://discord.gg/5fdPuxTg5Q">
-            <Button color="primary" auto ghost>
-              <FontAwesomeIcon icon={faDiscord} />
-            </Button>
-          </a>
-          <a href="https://twitter.com/teamfyralabs">
-            <Button color="primary" auto ghost>
-              <FontAwesomeIcon icon={faTwitter} />
-            </Button>
-          </a>
-          <a href="https://github.com/fyralabs">
-            <Button color="primary" auto ghost>
-              <FontAwesomeIcon icon={faGithub} />
-            </Button>
-          </a>
+          <Button
+            color="primary"
+            auto
+            ghost
+            as="a"
+            aria-label="Email FyraLabs"
+            // TODO: File issue about typings being wrong with custom components
+            // @ts-ignore
+            href="mailto:contact@fyralabs.com"
+          >
+            <FontAwesomeIcon icon={faEnvelope} />
+          </Button>
+          <Button
+            color="primary"
+            auto
+            ghost
+            as="a"
+            aria-label="FyraLabs Discord"
+            // TODO: File issue about typings being wrong with custom components
+            // @ts-ignore
+            href="https://discord.gg/5fdPuxTg5Q"
+          >
+            <FontAwesomeIcon icon={faDiscord} />
+          </Button>
+          <Button
+            color="primary"
+            auto
+            ghost
+            as="a"
+            aria-label="FyraLabs Twitter"
+            // TODO: File issue about typings being wrong with custom components
+            // @ts-ignore
+            href="https://twitter.com/teamfyralabs"
+          >
+            <FontAwesomeIcon icon={faTwitter} />
+          </Button>
+          <Button
+            color="primary"
+            auto
+            ghost
+            as="a"
+            aria-label="FyraLabs GitHub"
+            // TODO: File issue about typings being wrong with custom components
+            // @ts-ignore
+            href="https://github.com/fyralabs"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </Button>
         </Container>
       </Container>
     </>
