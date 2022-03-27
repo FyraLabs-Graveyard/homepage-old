@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { Col } from "@nextui-org/react";
+import Head from "next/head";
 
 export const TauCard = () => (
   <Card cover css={{ w: "300px", height: "290px" }}>
@@ -146,110 +147,128 @@ export const PhotonCard = () => (
 
 const Home = () => {
   return (
-    <Container
-      css={{
-        p: 50,
-        minHeight: "100vh",
-        m: 0,
-        gap: "50px",
-        alignItems: "center",
-        overflow: "auto",
-        justifyContent: "space-between",
-      }}
-      display="flex"
-      direction="column"
-      gap={0}
-      fluid
-      className={styles.bg}
-      wrap="nowrap"
-    >
-      <Container
-        gap={0}
-        fluid
-        css={{ textAlign: "center" }}
-        display="flex"
-        direction="column"
-      >
-        <Text h1 weight="bold">
-          Welcome to{" "}
-          <Text
-            span
-            css={{
-              textGradient: "125deg, $pink500 20%, $blue500 100%",
-            }}
-            weight="black"
-          >
-            FyraLabs
-          </Text>
-        </Text>
-        <Text h2 size={30} weight="normal">
-          We{" "}
-          <Text
-            span
-            css={{
-              textGradient: "125deg, $pink500 -20%, $pink600 100%",
-            }}
-            weight="bold"
-          >
-            build technology
-          </Text>{" "}
-          that{" "}
-          <Text
-            span
-            css={{
-              textGradient: "125deg, $blue400 -20%, $blue500 100%",
-            }}
-            weight="bold"
-          >
-            makes a difference
-          </Text>{" "}
-          for all.
-        </Text>
-      </Container>
-
-      <Container
-        display="flex"
-        gap={0}
-        fluid
-        css={{ gap: "48px", justifyContent: "center" }}
-      >
-        <TauCard />
-        <PhotonCard />
-      </Container>
-
+    <>
+      <Head>
+        <title>FyraLabs</title>
+        <meta property="og:title" content="FyraLabs" />
+        <meta property="og:site_name" content="FyraLabs Homepage" />
+        <meta property="og:url" content="https://fyralabs.com" />
+        <meta
+          property="og:description"
+          content="We build technology that makes a difference."
+        />
+        <meta property="og:type" content="business.business" />
+        <meta property="og:image" content="/banner.png" />
+        <meta
+          name="description"
+          content="We build technology that makes a difference."
+        />
+      </Head>
       <Container
         css={{
-          margin: 0,
-          p: 0,
-          fontSize: "1.75rem",
-          gap: "0.65rem",
-          justifyContent: "center",
+          p: 50,
+          minHeight: "100vh",
+          m: 0,
+          gap: "50px",
+          alignItems: "center",
+          overflow: "auto",
+          justifyContent: "space-between",
         }}
         display="flex"
-        direction="row"
+        direction="column"
+        gap={0}
+        fluid
+        className={styles.bg}
+        wrap="nowrap"
       >
-        <a href="mailto:contact@fyralabs.com">
-          <Button color="primary" auto ghost>
-            <FontAwesomeIcon icon={faEnvelope} />
-          </Button>
-        </a>
-        <a href="https://discord.gg/5fdPuxTg5Q">
-          <Button color="primary" auto ghost>
-            <FontAwesomeIcon icon={faDiscord} />
-          </Button>
-        </a>
-        <a href="https://twitter.com/teamfyralabs">
-          <Button color="primary" auto ghost>
-            <FontAwesomeIcon icon={faTwitter} />
-          </Button>
-        </a>
-        <a href="https://github.com/fyralabs">
-          <Button color="primary" auto ghost>
-            <FontAwesomeIcon icon={faGithub} />
-          </Button>
-        </a>
+        <Container
+          gap={0}
+          fluid
+          css={{ textAlign: "center" }}
+          display="flex"
+          direction="column"
+        >
+          <Text h1 weight="bold">
+            Welcome to{" "}
+            <Text
+              span
+              css={{
+                textGradient: "125deg, $pink500 20%, $blue500 100%",
+              }}
+              weight="black"
+            >
+              FyraLabs
+            </Text>
+          </Text>
+          <Text h2 size={30} weight="normal">
+            We{" "}
+            <Text
+              span
+              css={{
+                textGradient: "125deg, $pink500 -20%, $pink600 100%",
+              }}
+              weight="bold"
+            >
+              build technology
+            </Text>{" "}
+            that{" "}
+            <Text
+              span
+              css={{
+                textGradient: "125deg, $blue400 -20%, $blue500 100%",
+              }}
+              weight="bold"
+            >
+              makes a difference
+            </Text>{" "}
+            for all.
+          </Text>
+        </Container>
+
+        <Container
+          display="flex"
+          gap={0}
+          fluid
+          css={{ gap: "48px", justifyContent: "center" }}
+        >
+          <TauCard />
+          <PhotonCard />
+        </Container>
+
+        <Container
+          css={{
+            margin: 0,
+            p: 0,
+            fontSize: "1.75rem",
+            gap: "0.65rem",
+            justifyContent: "center",
+          }}
+          display="flex"
+          direction="row"
+        >
+          <a href="mailto:contact@fyralabs.com">
+            <Button color="primary" auto ghost>
+              <FontAwesomeIcon icon={faEnvelope} />
+            </Button>
+          </a>
+          <a href="https://discord.gg/5fdPuxTg5Q">
+            <Button color="primary" auto ghost>
+              <FontAwesomeIcon icon={faDiscord} />
+            </Button>
+          </a>
+          <a href="https://twitter.com/teamfyralabs">
+            <Button color="primary" auto ghost>
+              <FontAwesomeIcon icon={faTwitter} />
+            </Button>
+          </a>
+          <a href="https://github.com/fyralabs">
+            <Button color="primary" auto ghost>
+              <FontAwesomeIcon icon={faGithub} />
+            </Button>
+          </a>
+        </Container>
       </Container>
-    </Container>
+    </>
   );
 };
 
