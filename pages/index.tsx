@@ -167,7 +167,7 @@ const Home = () => {
           content="We build technology that makes a difference."
         />
         <meta property="og:type" content="business.business" />
-        <meta property="og:image" content="/banner.png" />
+        <meta property="og:image" content="/logo.png" />
         <meta
           name="description"
           content="We build technology that makes a difference."
