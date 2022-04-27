@@ -1,0 +1,49 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: homepage-ingress
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`fyralabs.com`)
+      services:
+        - name: homepage-service
+          port: 3000
+  tls:
+    secretName: fyralabs-com-origin
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: homepage-service
+  labels:
+    run: homepage
+spec:
+  ports:
+    - port: 3000
+      protocol: TCP
+  selector:
+    app: homepage
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: homepage-deployment
+spec:
+  selector:
+    matchLabels:
+      app: homepage
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: homepage
+    spec:
+      containers:
+        - name: homepage
+          image: "ghcr.io/fyralabs/homepage:49ef13fe549e10f5f8a3808934ed9521b8fd802f"
+          ports:
+            - containerPort: 3000
