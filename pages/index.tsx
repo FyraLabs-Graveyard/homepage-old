@@ -13,7 +13,6 @@ import Head from "next/head";
 
 export const TauCard = () => (
   <Card
-    cover
     css={{ w: "300px", height: "290px" }}
     // TODO: NextUI sets this as section, which is an abstract aria role, and not valid. File an issue?
     role="figure"
@@ -28,22 +27,21 @@ export const TauCard = () => (
         </Text>
       </Col>
     </Card.Header>
-    <Card.Body>
-      <Card.Image
-        src="/pb.svg"
-        css={{
-          linearGradient: "125deg, $pink500 -20%, $pink600 100%",
-        }}
-        height={400}
-        width="100%"
-        alt="tauOS abstract background"
-      />
-    </Card.Body>
+    <Card.Image
+      src="/pb.svg"
+      css={{
+        linearGradient: "125deg, $pink500 -20%, $pink600 100%",
+      }}
+      objectFit="cover"
+      height={400}
+      width="100%"
+      alt="tauOS abstract background"
+    />
     <Card.Footer
-      blur
+      isBlurred
       css={{
         position: "absolute",
-        bgBlur: "#ffffff",
+        bgBlur: "#ffffff66",
         borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
         bottom: 0,
         zIndex: 1,
@@ -85,7 +83,6 @@ export const TauCard = () => (
 
 export const PhotonCard = () => (
   <Card
-    cover
     css={{ w: "300px", height: "290px" }}
     // TODO: NextUI sets this as section, which is an abstract aria role, and not valid. File an issue?
     role="figure"
@@ -100,22 +97,21 @@ export const PhotonCard = () => (
         </Text>
       </Col>
     </Card.Header>
-    <Card.Body>
-      <Card.Image
-        src="/bb.svg"
-        css={{
-          linearGradient: "125deg, $pink500 -20%, $pink600 100%",
-        }}
-        height={400}
-        width="100%"
-        alt="photonBrowser abstract background"
-      />
-    </Card.Body>
+    <Card.Image
+      src="/bb.svg"
+      css={{
+        linearGradient: "125deg, $pink500 -20%, $pink600 100%",
+      }}
+      objectFit="cover"
+      height={400}
+      width="100%"
+      alt="photonBrowser abstract background"
+    />
     <Card.Footer
-      blur
+      isBlurred
       css={{
         position: "absolute",
-        bgBlur: "#ffffff",
+        bgBlur: "#ffffff66",
         borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
         bottom: 0,
         zIndex: 1,
