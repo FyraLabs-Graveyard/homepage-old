@@ -1,4 +1,7 @@
 body {
   // TODO: Prevent flashbang, file an issue of why it flashbangs even when the theme is expicitly set to dark
   background-color: #000;
+  background: url("/hex.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

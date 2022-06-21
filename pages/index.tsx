@@ -1,15 +1,40 @@
-import { Button, Card, Container, Row, Text } from "@nextui-org/react";
-import styles from "../styles/index.module.scss";
+import {
+  Button,
+  Card,
+  Container,
+  Link,
+  Row,
+  styled,
+  Text,
+} from "@nextui-org/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faCat,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faDiscord,
   faGithub,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import NextLink from "next/link";
 
 import { Col } from "@nextui-org/react";
 import Head from "next/head";
+
+const Badge = styled("div", {
+  bg: "$blue600",
+  borderRadius: "$pill",
+  px: "$5",
+});
+
+const NewsBanner = styled("div", {
+  display: "flex",
+  gap: "$5",
+  alignItems: "center",
+  my: "$10",
+});
 
 export const TauCard = () => (
   <Card
@@ -155,8 +180,8 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>FyraLabs</title>
-        <meta property="og:title" content="FyraLabs" />
+        <title>Fyra Labs</title>
+        <meta property="og:title" content="Fyra Labs" />
         <meta property="og:url" content="https://fyralabs.com" />
         <meta
           property="og:description"
@@ -172,6 +197,7 @@ const Home = () => {
       <Container
         css={{
           p: 50,
+          pt: 0,
           minHeight: "100vh",
           m: 0,
           gap: "50px",
@@ -182,27 +208,53 @@ const Home = () => {
         direction="column"
         wrap="nowrap"
         gap={0}
-        className={styles.bg}
         fluid
         responsive={false}
       >
         <Container
           gap={0}
           fluid
-          css={{ textAlign: "center" }}
+          css={{ textAlign: "center", alignItems: "center" }}
           display="flex"
           direction="column"
         >
+          <NewsBanner>
+            <Badge>
+              <Text small weight="black">
+                NEW
+              </Text>
+            </Badge>
+            <NextLink href="/join">
+              <Link
+                css={{
+                  fontWeight: "bold",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "$5",
+                  svg: {
+                    transition: "transform 0.2s ease-in-out",
+                  },
+                  "&:hover svg": {
+                    transform: "translateX(5px)",
+                  },
+                }}
+                color="text"
+              >
+                Now accepting staff applications{" "}
+                <FontAwesomeIcon icon={faArrowRight} />
+              </Link>
+            </NextLink>
+          </NewsBanner>
           <Text h1 weight="bold">
             Welcome to{" "}
             <Text
               span
               css={{
-                textGradient: "125deg, $pink500 20%, $blue500 100%",
+                textGradient: "125deg, $pink600 20%, $blue600 100%",
               }}
               weight="black"
             >
-              FyraLabs
+              Fyra Labs
             </Text>
           </Text>
           <Text h2 size={30} weight="normal">
@@ -210,7 +262,7 @@ const Home = () => {
             <Text
               span
               css={{
-                textGradient: "125deg, $pink500 -20%, $pink600 100%",
+                textGradient: "125deg, $pink600 -20%, $pink700 100%",
               }}
               weight="bold"
             >
@@ -220,7 +272,7 @@ const Home = () => {
             <Text
               span
               css={{
-                textGradient: "125deg, $blue400 -20%, $blue500 100%",
+                textGradient: "125deg, $blue500 -20%, $blue600 100%",
               }}
               weight="bold"
             >
@@ -256,7 +308,7 @@ const Home = () => {
             auto
             ghost
             as="a"
-            aria-label="Email FyraLabs"
+            aria-label="Email Fyra Labs"
             // TODO: File issue about typings being wrong with custom components
             // @ts-ignore
             href="mailto:contact@fyralabs.com"
@@ -268,7 +320,7 @@ const Home = () => {
             auto
             ghost
             as="a"
-            aria-label="FyraLabs Discord"
+            aria-label="Fyra Labs Discord"
             // TODO: File issue about typings being wrong with custom components
             // @ts-ignore
             href="https://discord.gg/5fdPuxTg5Q"
@@ -280,7 +332,7 @@ const Home = () => {
             auto
             ghost
             as="a"
-            aria-label="FyraLabs Twitter"
+            aria-label="Fyra Labs Twitter"
             // TODO: File issue about typings being wrong with custom components
             // @ts-ignore
             href="https://twitter.com/teamfyralabs"
@@ -292,7 +344,7 @@ const Home = () => {
             auto
             ghost
             as="a"
-            aria-label="FyraLabs GitHub"
+            aria-label="Fyra Labs GitHub"
             // TODO: File issue about typings being wrong with custom components
             // @ts-ignore
             href="https://github.com/fyralabs"
