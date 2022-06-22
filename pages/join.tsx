@@ -1,4 +1,4 @@
-import { faCat, faCode, faComputer } from "@fortawesome/free-solid-svg-icons";
+import { faCat, faCode } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card, Container, Grid, Spacer, styled, Text } from "@nextui-org/react";
 import { GetStaticProps } from "next";
@@ -111,8 +111,8 @@ const Join = ({ jobs }: { jobs: Job[] }) => {
       </Text>
       <Spacer />
       <Grid.Container gap={2} justify="center">
-        {jobs.map((job) => (
-          <Grid>
+        {jobs.map((job, i) => (
+          <Grid key={i}>
             <PositionCard {...job} />
           </Grid>
         ))}
