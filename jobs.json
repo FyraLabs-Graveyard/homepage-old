@@ -4,5 +4,17 @@
     "branch": "tauOS",
     "position": "Frontend Rust-GTK Developer",
     "body": "As a frontend developer on the tauOS project, you'll be working with our UI framework, libhelium, to develop core apps for the tauOS platform. Proficency in GTK and Rust is required. This is an unpaid position."
+  },
+  {
+    "type": "development",
+    "branch": "tauOS",
+    "position": "Backend Rust Developer - Integrations",
+    "body": "One of the core focuses for tauOS is our seemless integration with all of your devices and applications. This role is primarily focused on working on the system daemon that enables those ecosystem features. Proficency with asyncronous Rust is required. This is an unpaid position."
+  },
+    {
+    "type": "development",
+    "branch": "tauOS",
+    "position": "GTK C Developer - Settings",
+    "body": "tauOS maintains a fork of gnome-control-center with our own improvements and changes to accommodate the tauOS platform. Within this role, you'll be working directly on our GNOME Settings fork, written in GTK and C. Proficency with GNOME internals is recommended. This is an unpaid position."
   }
 ]
