@@ -65,13 +65,13 @@ const Join = ({ jobs }: { jobs: Job[] }) => {
         <meta property="og:url" content="https://fyralabs.com/join" />
         <meta
           property="og:description"
-          content="Join an inclusive team building cutting-edge technology at Fyra Kabs."
+          content="Join an inclusive team building cutting-edge technology at Fyra Labs."
         />
         <meta property="og:type" content="business.business" />
         <meta property="og:image" content="/logo.png" />
         <meta
           name="description"
-          content="Join an inclusive team building cutting-edge technology at Fyra Kabs."
+          content="Join an inclusive team building cutting-edge technology at Fyra Labs."
         />
       </Head>
       <Text h1>
