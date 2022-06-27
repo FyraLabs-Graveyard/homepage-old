@@ -26,9 +26,10 @@ export const getStaticProps: GetStaticProps = () => {
 };
 
 const PositionCard: React.FC<Job> = ({ body, branch, position, type }) => {
+  //  css={{ p: "$6", maxWidth: "500px" }}
   return (
     <a href="https://yqdmt8w5l4v.typeform.com/to/IHFqKVPY">
-      <Card css={{ p: "$6", mw: "400px" }} isPressable>
+      <Card isPressable css={{ p: "$6", mw: 500, h: "100%" }}>
         <Card.Header>
           <PositionIcon icon={type === "development" ? faCode : faCat} />
           <Grid.Container css={{ pl: "$6" }}>
@@ -110,10 +111,10 @@ const Join = ({ jobs }: { jobs: Job[] }) => {
         technology.
       </Text>
       <Spacer />
-      <Grid.Container gap={2} justify="center">
+      <Grid.Container gap={2} justify="center" alignItems="stretch" wrap="wrap">
         {jobs.map((job, i) => (
-          <Grid key={i}>
-            <PositionCard {...job} />
+          <Grid>
+            <PositionCard key={i} {...job} />
           </Grid>
         ))}
       </Grid.Container>
