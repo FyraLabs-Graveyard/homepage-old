@@ -113,8 +113,8 @@ const Join = ({ jobs }: { jobs: Job[] }) => {
       <Spacer />
       <Grid.Container gap={2} justify="center" alignItems="stretch" wrap="wrap">
         {jobs.map((job, i) => (
-          <Grid>
-            <PositionCard key={i} {...job} />
+          <Grid key={i}>
+            <PositionCard {...job} />
           </Grid>
         ))}
       </Grid.Container>
