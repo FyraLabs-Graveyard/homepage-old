@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps = () => {
 const PositionCard: React.FC<Job> = ({ body, branch, position, type }) => {
   //  css={{ p: "$6", maxWidth: "500px" }}
   return (
-    <a href="https://yqdmt8w5l4v.typeform.com/to/IHFqKVPY">
+    <a href="https://airtable.com/shr7nmRedL9NgR1JT">
       <Card isPressable css={{ p: "$6", mw: 500, h: "100%" }}>
         <Card.Header>
           <PositionIcon icon={type === "development" ? faCode : faCat} />
