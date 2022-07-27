@@ -16,5 +16,17 @@
     "branch": "tauOS",
     "position": "GTK C Developer - Settings",
     "body": "tauOS maintains a fork of gnome-control-center with our own improvements and changes to accommodate the tauOS platform. Within this role, you'll be working directly on our GNOME Settings fork, written in GTK and C. Proficency with GNOME internals is recommended. This is an unpaid position."
+  },
+   {
+    "type": "operations",
+    "branch": "Consulting",
+    "position": "Business Analyst",
+    "body": "Fyra Consulting lets companies focus on what they do best. As a Business Analyst you'll work to improve the ways clients do their work, from cutting red tape to creating new systems, you'll do it all. People skills and experience in the inner-workings of a business are required. Former Accenture employees who resigned or were fired in the last 6 months are not eligible for this position. This is an unpaid position."
+  },
+   {
+    "type": "development",
+    "branch": "photonBrowser",
+    "position": "Typescript-React Developer",
+    "body": "photonBrowser is the default browser for tauOS. As a TSX developer you'll work to get the frontend and backend of photonBrowser up and running. This is an unpaid position."
   }
 ]
