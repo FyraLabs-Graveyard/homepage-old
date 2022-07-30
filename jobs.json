@@ -28,5 +28,11 @@
     "branch": "photonBrowser",
     "position": "Typescript-React Developer",
     "body": "photonBrowser is the default browser for tauOS. As a TSX developer you'll work to get the frontend and backend of photonBrowser up and running. This is an unpaid position."
+  },
+  {
+    "type": "development",
+    "branch": "tauOS",
+    "position": "Backend Go Developer - Integrations",
+    "body": "One of the core focuses for tauOS is our seemless integration with all of your devices and applications. This role is primarily focused on the backend services and API that enables those ecosystem features. Proficency with Go is required. This is an unpaid position."
   }
 ]
