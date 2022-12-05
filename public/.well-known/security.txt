@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:security@fyralabs.com
+Expires: 2023-12-05T02:42:00.000Z
+Encryption: https://fyralabs.com/pgp.asc
+Preferred-Languages: en,es,pt-br,cmn,en_owo
+Canonical: https://fyralabs.com/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQTWU0iR/ECqSxHATizPqdvJT3LwHwUCY41fJgAKCRDPqdvJT3Lw
+H9AwAQCZturHFcChIwJ7uT4y6crt9PPw1qcwMPAgHVgojOskfgD/YXIVa9lR7EyM
+dZu0B2OURyBFwV18tqepnNovqd96AQ4=
+=P63b
+-----END PGP SIGNATURE-----
